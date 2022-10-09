@@ -9,6 +9,11 @@
 			h2 {
 				text-align:center;
 			}
+			#points, #point{
+				text-align:center;
+				display:inline;
+			}
+			
 			div {
 				text-align:center;
 			}
@@ -30,9 +35,12 @@
 		let's play a matching game to see if you would be able to identify the identical mythical creatures
 		and if possible interest you to learn about their stories. Also, see if you would be able to find and match
 		the one mythical creature that does not have Chinese origin in it. Good Luck!</h2>
-		
 		<div>
-			<span><img id = place1 src = "Chinese Dragon Placeholder1.jpg" onclick = "flipImage1()"/></span>
+			<h3 id = point>Score</h3>
+			<h3 id = points>0</h3>
+		</div>
+		<div>
+			<span id = place1 onclick = "flipImage1()"/><img src = "Chinese Dragon Placeholder1.jpg"></span>
 			<span><img id = place2 src = "Chinese Dragon Placeholder2.jpg" /></span>
 			<span><img id = place3 src = "Chinese Dragon Placeholder3.jpg" /></span>
 			<span><img id = place4 src = "Chinese Dragon Placeholder4.jpg" /></span>
@@ -59,9 +67,20 @@
 		<script>
 			var creature1 = document.getElementById("place1");
 			var creature2 = document.getElementById("place2");
+			var scores = document.getElementById("points").value;
+			function increaseScore() {
+				scores ++;
+			}
+			
 			function flipImage1() {
+				increaseScore();
 				creature1.innerHTML = "<img src = 'Dragon.jpg'>";
 			}
+			
+			function checkImage() {
+			
+			
+				
 		</script>
 		
 		</body>
