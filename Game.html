@@ -4,9 +4,14 @@
 		<title>Match Game Jay Li</title> 
 		<style>
 			h1 {
+				font-family: fantasy;
+				color: #F7F7F7;
+				text-decoration: underline gold;
 				text-align:center;	
 			}
 			h2 {
+				font-family: cursive;
+				color: #F7F7F7;
 				text-align:center;
 			}
 			#points, #point{
@@ -22,6 +27,10 @@
 				width: 200px;
 				height: 200px;
 			}
+			body {
+				background-color: #F96D4F;
+			}
+
 				
 		</style>
 	</head>
@@ -34,7 +43,8 @@
 		Most importantly, all of these mythical creatures hold an fascinating story behind it. So now 
 		let's play a matching game to see if you would be able to identify the identical mythical creatures
 		and if possible interest you to learn about their stories. Also, see if you would be able to find and match
-		the one mythical creature that does not have Chinese origin in it. Good Luck!</h2>
+		the one mythical creature that does not have Chinese origin in it. Good Luck!
+		(Each time you click an image your score will increase by one. Best score is 16) </h2>
 		<div>
 			<h3 id = point>Score</h3>
 			<span id = points><h3>0</h3></span>
@@ -279,8 +289,9 @@
 			}
 			
 			function checkImage() {
-				if (scores % 3 === 0)
+				if (scores % 2 === 0)
 				{
+					setTimeout(() => {
 					if (creature1.innerHTML !== creature4.innerHTML)
 					{
 						flipBack1();
@@ -321,6 +332,7 @@
 						flipBack11();
 						flipBack14();
 					}	
+				}, 750)
 				}
 			}
 		</script>
