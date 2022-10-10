@@ -40,43 +40,226 @@
 			<span id = points><h3>0</h3></span>
 		</div>
 		<div>
-			<span id = place1 onclick = "flipImage1()"/><img src = "Chinese Dragon Placeholder1.jpg"></span>
-			<span><img id = place2 src = "Chinese Dragon Placeholder2.jpg" /></span>
-			<span><img id = place3 src = "Chinese Dragon Placeholder3.jpg" /></span>
-			<span><img id = place4 src = "Chinese Dragon Placeholder4.jpg" /></span>
+			<button onclick = "reset();">Restart</button>
 		</div>
 		<div>
-			<img id = place5 src = "Chinese Dragon Placeholder5.jpg" />
-			<img id = place6 src = "Chinese Dragon Placeholder6.jpg" />
-			<img id = place7 src = "Chinese Dragon Placeholder7.jpg" />
-			<img id = place8 src = "Chinese Dragon Placeholder8.jpg" />
+			<span id = place1 onclick = "flipImage1()"/><img src = "Chinese Dragon Placeholder1.jpg" /></span>
+			<span id = place2 onclick = "flipImage2()"/><img src = "Chinese Dragon Placeholder2.jpg" /></span>
+			<span id = place3 onclick = "flipImage3()"/><img src = "Chinese Dragon Placeholder3.jpg" /></span>
+			<span id = place4 onclick = "flipImage4()"/><img src = "Chinese Dragon Placeholder4.jpg" /></span>
 		</div>
 		<div>
-			<img id = place9 src = "Chinese Dragon Placeholder9.jpg" />
-			<img id = place10 src = "Chinese Dragon Placeholder10.jpg" />
-			<img id = place11 src = "Chinese Dragon Placeholder11.jpg" />
-			<img id = place12 src = "Chinese Dragon Placeholder12.jpg" />
+			<span id = place5 onclick = "flipImage5()"/><img src = "Chinese Dragon Placeholder5.jpg" /></span>
+			<span id = place6 onclick = "flipImage6()"/><img src = "Chinese Dragon Placeholder6.jpg" /></span>
+			<span id = place7 onclick = "flipImage7()"/><img src = "Chinese Dragon Placeholder7.jpg" /></span>
+			<span id = place8 onclick = "flipImage8()"/><img src = "Chinese Dragon Placeholder8.jpg" /></span>
 		</div>
 		<div>
-			<img id = place13 src = "Chinese Dragon Placeholder13.jpg" />
-			<img id = place14 src = "Chinese Dragon Placeholder14.jpg" />
-			<img id = place15 src = "Chinese Dragon Placeholder15.jpg" />
-			<img id = place16 src = "Chinese Dragon Placeholder16.jpg" />
+			<span id = place9 onclick = "flipImage9()"/><img src = "Chinese Dragon Placeholder9.jpg" /></span>
+			<span id = place10 onclick = "flipImage10()"/><img src = "Chinese Dragon Placeholder10.jpg" /></span>
+			<span id = place11 onclick = "flipImage11()"/><img src = "Chinese Dragon Placeholder11.jpg" /></span>
+			<span id = place12 onclick = "flipImage12()"/><img src = "Chinese Dragon Placeholder12.jpg" /></span>
+		</div>
+		<div>
+			<span id = place13 onclick = "flipImage13()"/><img src = "Chinese Dragon Placeholder13.jpg" /></span>
+			<span id = place14 onclick = "flipImage14()"/><img src = "Chinese Dragon Placeholder14.jpg" /></span>
+			<span id = place15 onclick = "flipImage15()"/><img src = "Chinese Dragon Placeholder15.jpg" /></span>
+			<span id = place16 onclick = "flipImage16()"/><img src = "Chinese Dragon Placeholder16.jpg" /></span>
 		</div>
 		
 		<script>
 			var creature1 = document.getElementById("place1");
 			var creature2 = document.getElementById("place2");
-			var score = document.getElementById("points").value;
+			var creature3 = document.getElementById("place3");
+			var creature4 = document.getElementById("place4");
+			var creature5 = document.getElementById("place5");
+			var creature6 = document.getElementById("place6");
+			var creature7 = document.getElementById("place7");
+			var creature8 = document.getElementById("place8");
+			var creature9 = document.getElementById("place9");
+			var creature10 = document.getElementById("place10");
+			var creature11 = document.getElementById("place11");
+			var creature12 = document.getElementById("place12");
+			var creature13 = document.getElementById("place13");
+			var creature14 = document.getElementById("place14");
+			var creature15 = document.getElementById("place15");
+			var creature16 = document.getElementById("place16");
+			
+			var score = document.getElementById("points");
+			var scores = 0;
+		
 			function increaseScore() {
-				var scores = 0;
 				scores++;
+				score.innerHTML = `<h3>${scores}</h3>`;
+			}
+			
+			function decreaseScore() {
+				scores = 0;
 				score.innerHTML = `<h3>${scores}</h3>`;
 			}
 			
 			function flipImage1() {
 				increaseScore();
-				creature1.innerHTML = "<img src = 'Dragon.jpg'>";
+				creature1.innerHTML = "<img src = 'Qiong Qi.jpg'>";
+			}
+			
+			function flipImage2() {
+				increaseScore();
+				creature2.innerHTML = "<img src = 'Phoenix.jpg'>";
+			}
+			
+			function flipImage3() {
+				increaseScore();
+				creature3.innerHTML = "<img src = 'Nine Tailed Fox.jpg'>";
+			}
+			
+			function flipImage4() {
+				increaseScore();
+				creature4.innerHTML = "<img src = 'Qiong Qi Copy.jpg'>";
+			}
+			
+			function flipImage5() {
+				increaseScore();
+				creature5.innerHTML = "<img src = 'Phoenix Copy.jpg'>";
+			}
+			
+			function flipImage6() {
+				increaseScore();
+				creature6.innerHTML = "<img src = 'Fu Zhu.jpg'>";
+			}
+			
+			function flipImage7() {
+				increaseScore();
+				creature7.innerHTML = "<img src = 'Dragon.jpg'>";
+			}
+			
+			function flipImage8() {
+				increaseScore();
+				creature8.innerHTML = "<img src = 'Sheng Huang.jpg'>";
+			}
+			
+			function flipImage9() {
+				increaseScore();
+				creature9.innerHTML = "<img src = 'Fu Zhu Copy.jpg'>";
+			}
+			
+			function flipImage10() {
+				increaseScore();
+				creature10.innerHTML = "<img src = 'Nine Tailed Fox Copy.jpg'>";
+			}
+			
+			function flipImage11() {
+				increaseScore();
+				creature11.innerHTML = "<img src = 'Qilin.jpg'>";
+			}
+			
+			function flipImage12() {
+				increaseScore();
+				creature12.innerHTML = "<img src = 'Hydra Image.jpg'>";
+			}
+			
+			function flipImage13() {
+				increaseScore();
+				creature13.innerHTML = "<img src = 'Dragon.jpg'>";
+			}
+			
+			function flipImage14() {
+				increaseScore();
+				creature14.innerHTML = "<img src = 'Qilin Copy.jpg'>";
+			}
+			
+			function flipImage15() {
+				increaseScore();
+				creature15.innerHTML = "<img src = 'Hydra Image Copy.jpg'>";
+			}
+			
+			function flipImage16() {
+				increaseScore();
+				creature16.innerHTML = "<img src = 'Sheng Huang Copy.jpg'>";
+			}
+			
+			function flipBack1() {
+				creature1.innerHTML = "<img src = 'Chinese Dragon Placeholder1.jpg'>";
+			}
+			
+			function flipBack2() {
+				creature2.innerHTML = "<img src = 'Chinese Dragon Placeholder2.jpg'>";
+			}
+			
+			function flipBack3() {
+				creature3.innerHTML = "<img src = 'Chinese Dragon Placeholder3.jpg'>";
+			}
+			
+			function flipBack4() {
+				creature4.innerHTML = "<img src = 'Chinese Dragon Placeholder4.jpg'>";
+			}
+			
+			function flipBack5() {
+				creature5.innerHTML = "<img src = 'Chinese Dragon Placeholder5.jpg'>";
+			}
+			
+			function flipBack6() {
+				creature6.innerHTML = "<img src = 'Chinese Dragon Placeholder6.jpg'>";
+			}
+			
+			function flipBack7() {
+				creature7.innerHTML = "<img src = 'Chinese Dragon Placeholder7.jpg'>";
+			}
+			
+			function flipBack8() {
+				creature8.innerHTML = "<img src = 'Chinese Dragon Placeholder8.jpg'>";
+			}
+			
+			function flipBack9() {
+				creature9.innerHTML = "<img src = 'Chinese Dragon Placeholder9.jpg'>";
+			}
+			
+			function flipBack10() {
+				creature10.innerHTML = "<img src = 'Chinese Dragon Placeholder10.jpg'>";
+			}
+			
+			function flipBack11() {
+				creature11.innerHTML = "<img src = 'Chinese Dragon Placeholder11.jpg'>";
+			}
+			
+			function flipBack12() {
+				creature12.innerHTML = "<img src = 'Chinese Dragon Placeholder12.jpg'>";
+			}
+			
+			function flipBack13() {
+				creature13.innerHTML = "<img src = 'Chinese Dragon Placeholder13.jpg'>";
+			}
+			
+			function flipBack14() {
+				creature14.innerHTML = "<img src = 'Chinese Dragon Placeholder14.jpg'>";
+			}
+			
+			function flipBack15() {
+				creature15.innerHTML = "<img src = 'Chinese Dragon Placeholder15.jpg'>";
+			}
+			
+			function flipBack16() {
+				creature16.innerHTML = "<img src = 'Chinese Dragon Placeholder16.jpg'>";
+			}
+			
+			function reset() {
+				flipBack1();
+				flipBack2();
+				flipBack3();
+				flipBack4();
+				flipBack5();
+				flipBack6();
+				flipBack7();
+				flipBack8();
+				flipBack9();
+				flipBack10();
+				flipBack11();
+				flipBack12();
+				flipBack13();
+				flipBack14();
+				flipBack15();
+				flipBack16();
+				decreaseScore();
 			}
 			
 			function checkImage() {
