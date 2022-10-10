@@ -101,81 +101,97 @@
 			function flipImage1() {
 				increaseScore();
 				creature1.innerHTML = "<img src = 'Qiong Qi.jpg'>";
+				checkImage();
 			}
 			
 			function flipImage2() {
 				increaseScore();
 				creature2.innerHTML = "<img src = 'Phoenix.jpg'>";
+				checkImage();
 			}
 			
 			function flipImage3() {
 				increaseScore();
 				creature3.innerHTML = "<img src = 'Nine Tailed Fox.jpg'>";
+				checkImage();
 			}
 			
 			function flipImage4() {
 				increaseScore();
-				creature4.innerHTML = "<img src = 'Qiong Qi Copy.jpg'>";
+				creature4.innerHTML = "<img src = 'Qiong Qi.jpg'>";
+				checkImage();
 			}
 			
 			function flipImage5() {
 				increaseScore();
-				creature5.innerHTML = "<img src = 'Phoenix Copy.jpg'>";
+				creature5.innerHTML = "<img src = 'Phoenix.jpg'>";
+				checkImage();
 			}
 			
 			function flipImage6() {
 				increaseScore();
 				creature6.innerHTML = "<img src = 'Fu Zhu.jpg'>";
+				checkImage();
 			}
 			
 			function flipImage7() {
 				increaseScore();
 				creature7.innerHTML = "<img src = 'Dragon.jpg'>";
+				checkImage();
 			}
 			
 			function flipImage8() {
 				increaseScore();
 				creature8.innerHTML = "<img src = 'Sheng Huang.jpg'>";
+				checkImage();
 			}
 			
 			function flipImage9() {
 				increaseScore();
-				creature9.innerHTML = "<img src = 'Fu Zhu Copy.jpg'>";
+				creature9.innerHTML = "<img src = 'Fu Zhu.jpg'>";
+				checkImage();
 			}
 			
 			function flipImage10() {
 				increaseScore();
-				creature10.innerHTML = "<img src = 'Nine Tailed Fox Copy.jpg'>";
+				creature10.innerHTML = "<img src = 'Nine Tailed Fox.jpg'>";
+				checkImage();
 			}
 			
 			function flipImage11() {
 				increaseScore();
 				creature11.innerHTML = "<img src = 'Qilin.jpg'>";
+				checkImage();
 			}
 			
 			function flipImage12() {
 				increaseScore();
 				creature12.innerHTML = "<img src = 'Hydra Image.jpg'>";
+				checkImage();
 			}
 			
 			function flipImage13() {
 				increaseScore();
 				creature13.innerHTML = "<img src = 'Dragon.jpg'>";
+				checkImage();
 			}
 			
 			function flipImage14() {
 				increaseScore();
-				creature14.innerHTML = "<img src = 'Qilin Copy.jpg'>";
+				creature14.innerHTML = "<img src = 'Qilin.jpg'>";
+				checkImage();
 			}
 			
 			function flipImage15() {
 				increaseScore();
-				creature15.innerHTML = "<img src = 'Hydra Image Copy.jpg'>";
+				creature15.innerHTML = "<img src = 'Hydra Image.jpg'>";
+				checkImage();
 			}
 			
 			function flipImage16() {
 				increaseScore();
-				creature16.innerHTML = "<img src = 'Sheng Huang Copy.jpg'>";
+				creature16.innerHTML = "<img src = 'Sheng Huang.jpg'>";
+				checkImage();
 			}
 			
 			function flipBack1() {
@@ -263,9 +279,50 @@
 			}
 			
 			function checkImage() {
+				if (scores % 3 === 0)
+				{
+					if (creature1.innerHTML !== creature4.innerHTML)
+					{
+						flipBack1();
+						flipBack4();
+					}
+					if (creature2.innerHTML !== creature5.innerHTML)
+					{
+						flipBack2();
+						flipBack5();
+					}
+					if (creature3.innerHTML !== creature10.innerHTML)
+					{
+						flipBack3();
+						flipBack10();
+					}
+					if (creature6.innerHTML !== creature9.innerHTML)
+					{
+						flipBack6();
+						flipBack9();
+					}
+					if (creature7.innerHTML !== creature13.innerHTML)
+					{
+						flipBack7();
+						flipBack13();
+					}
+					if (creature8.innerHTML !== creature16.innerHTML)
+					{
+						flipBack8();
+						flipBack16();
+					}
+					if (creature1.innerHTML !== creature4.innerHTML)
+					{
+						flipBack1();
+						flipBack4();
+					}
+					if (creature11.innerHTML !== creature14.innerHTML)
+					{
+						flipBack11();
+						flipBack14();
+					}	
+				}
 			}
-			
-				
 		</script>
 		
 		</body>
