@@ -27,7 +27,7 @@
 		
 	</head>
 	
-	<body onload = "initialCards();">
+	<body>
 		<h1>XTreme Rock Paper Scissor</h1>
 		<h2>Rock Paper Scissors is a common game people are familiar with and play. 
 			However, the ordinary feature doesn't make the game people would play for a long period time. 	
@@ -48,25 +48,25 @@
 		<div id = "playerWeapon"></div> 
 		
 		<script>
-		const ROCK = 1, PAPER 2, SCISSOR = 3
+		const ROCK = 1, PAPER = 2, SCISSOR = 3
 		let randomNumber = (bottom,top) => Math.floor((Math.random() * top) + bottom);
 		
 		function initialCards() {
 			let computer = {
-				rocks: 5;
-				scissors: 5;
-				papers: 5;
+				rocks: 5,
+				scissors: 5,
+				papers: 5,
 			}
 			
 			let player = {
-				rocks: 5;
-				scissors: 5;
-				papers: 5;
+				rocks: 5,
+				scissors: 5,
+				papers: 5,
 			}
 			computerChosedCard = document.getElementById("computerWeapon");
 			computerChosedCard.innerHTML = '<img src = "ComputerCardHolder.jpg" />'
 			playerChosedCard = document.getElementById("playerWeapon");
-			playerChosedCard =.innerHTML = '<img src = "PlayerCardHolder.jpg" />'
+			playerChosedCard.innerHTML = '<img src = "PlayerCardHolder.jpg" />'
 		}	
 			
 		
@@ -74,6 +74,7 @@
 		
 		function checkWin(choice1, choice2) {
 			return (choice1 > choice2) ? true : false;
+		}
 		</script>
 	</body>
 <html>
