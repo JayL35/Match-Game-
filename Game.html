@@ -12,6 +12,9 @@
 				font-family: cursive;
 				text-align:center;
 			}
+			div {
+				text-align:center;
+			}
 			img {
 				padding: 5px;
 				width: 220px;
@@ -21,6 +24,29 @@
 				background-color: #65EAA8;
 			}
 		</style>
+		
+	</head>
+	
+	<body onload = "initialCards();">
+		<h1>XTreme Rock Paper Scissor</h1>
+		<h2>Rock Paper Scissors is a common game people are familiar with and play. 
+			However, the ordinary feature doesn't make the game people would play for a long period time. 	
+			Now, building on top of Rock Paper Scissor is a new game XTreme Rock Paper Scissor. "XRPS is a 
+			two player game where each player controls a limited arsenal of rocks, papers, and
+			scissors that they must play against each other. The object of the game is to capture all of the
+			weapons in your opponent’s arsenal." Additionally, it retains the fundamental principles of Rock Paper Scissors.
+			Enjoy!
+		</h2>
+		<div>
+			Computer's Weapons 
+			</br>
+			<span><img src = "Card PlaceHolder1.jpg" /><span>
+			<span><img src = "Card PlaceHolder2.jpg" /><span>
+			<span><img src = "Card PlaceHolder3.jpg" /><span>
+		</div>
+		<div id = "computerWeapon"></div>
+		<div id = "playerWeapon"></div> 
+		
 		<script>
 		const ROCK = 1, PAPER 2, SCISSOR = 3
 		let randomNumber = (bottom,top) => Math.floor((Math.random() * top) + bottom);
@@ -38,9 +64,9 @@
 				papers: 5;
 			}
 			computerChosedCard = document.getElementById("computerWeapon");
-			computerChosedCard.innterHTML = <img src = "ComputerCardHolder.jpg" />
+			computerChosedCard.innerHTML = '<img src = "ComputerCardHolder.jpg" />'
 			playerChosedCard = document.getElementById("playerWeapon");
-			playerChosedCard =.innerHTML = <img src = "PlayerCardHolder.jpg" />			
+			playerChosedCard =.innerHTML = '<img src = "PlayerCardHolder.jpg" />'
 		}	
 			
 		
@@ -49,25 +75,5 @@
 		function checkWin(choice1, choice2) {
 			return (choice1 > choice2) ? true : false;
 		</script>
-	</head>
-	
-	<body>
-		<h1>XTreme Rock Paper Scissor</h1>
-		<h2>Rock Paper Scissors is a common game people are familiar with and play. 
-			However, the ordinary feature doesn't make the game people would play for a long period time. 	
-			Now, building on top of Rock Paper Scissor is a new game XTreme Rock Paper Scissor. "XRPS is a 
-			two player game where each player controls a limited arsenal of rocks, papers, and
-			scissors that they must play against each other. The object of the game is to capture all of the
-			weapons in your opponent’s arsenal." Additionally, it retains the fundamental principles of Rock Paper Scissors.
-			Enjoy!
-		</h2>
-		Computer's Weapons
-		<div>
-			<span><img src = "Card PlaceHolder1.jpg" /><span>
-			<span><img src = "Card PlaceHolder2.jpg" /><span>
-			<span><img src = "Card PlaceHolder3.jpg" /><span>
-		</div>
-		<div id = "computerWeapon"></div>
-		<div id = "playerWeapon"></div> 
 	</body>
 <html>
