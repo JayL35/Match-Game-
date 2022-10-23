@@ -5,15 +5,18 @@
 		<style>
 			h1 {
 				font-family: fantasy;
-				text-decoration: underline blue;
+				text-decoration: underline cyan;
+				color: #F7F7F7;
 				text-align:center;	
 			}
 			h2 {
 				font-family: cursive;
+				color: #F7F7F7;
 				text-align:center;
 			}
 			div {
 				text-align:center;
+				color: #F7F7F7;	
 			}
 			img {
 				padding: 5px;
@@ -21,13 +24,48 @@
 				height: 330px;
 			}
 			body {
-				background-color: #65EAA8;
+				background-image: url("XTreme Project Background.jpg");
 			}
 		</style>
+		<script>
+			const ROCK = 1, PAPER = 2, SCISSOR = 3
+			let randomNumber = (bottom,top) => Math.floor((Math.random() * top) + bottom);
+			
+			function initialCards() {
+				let computer = {
+					rocks: 5,
+					scissors: 5,
+					papers: 5,
+				}
+				
+				let player = {
+					rocks: 5,
+					scissors: 5,
+					papers: 5,
+				}
+				computerChosedCard = document.getElementById("computerWeapon");
+				computerChosedCard.innerHTML = '<img src = "ComputerCardHolder.jpg" />'
+				playerChosedCard = document.getElementById("playerWeapon");
+				playerChosedCard.innerHTML = '<img src = "PlayerCardHolder.jpg" />'
+			}	
+			
+			function showRule() {
+				body.innerHTML = "Rules";
+			}
+			
+			function fight(num)
+				
+			
+			let newWeapons = (numOfWeapons, addOne) => numOfWeapons + addOne;
+			
+			function checkWin(choice1, choice2) {
+				return (choice1 > choice2) ? true : false;
+			}
+		</script>
 		
 	</head>
 	
-	<body>
+	<body onload = "initialCards();">
 		<h1>XTreme Rock Paper Scissor</h1>
 		<h2>Rock Paper Scissors is a common game people are familiar with and play. 
 			However, the ordinary feature doesn't make the game people would play for a long period time. 	
@@ -38,7 +76,7 @@
 			Enjoy!
 		</h2>
 		<div>
-			Computer's Weapons 
+			<h3>Computer's Weapons</h3>
 			</br>
 			<span><img src = "Card PlaceHolder1.jpg" /><span>
 			<span><img src = "Card PlaceHolder2.jpg" /><span>
@@ -46,35 +84,13 @@
 		</div>
 		<div id = "computerWeapon"></div>
 		<div id = "playerWeapon"></div> 
+		<div>
+			<h3>Your Weapons</h3>
+			</br>
+			<span id = rockCard onclick = "fight(1)"/><img src = "Rock.jpg" /></span>
+			<span id = PaperCard onclick = "fight(2)"/><img src = "Paper.jpg" /></span>
+			<span id = ScissorCard onclick = "fight(3)"/><img src = "Scissors.jpg" /></span>
+		</div>
 		
-		<script>
-		const ROCK = 1, PAPER = 2, SCISSOR = 3
-		let randomNumber = (bottom,top) => Math.floor((Math.random() * top) + bottom);
-		
-		function initialCards() {
-			let computer = {
-				rocks: 5,
-				scissors: 5,
-				papers: 5,
-			}
-			
-			let player = {
-				rocks: 5,
-				scissors: 5,
-				papers: 5,
-			}
-			computerChosedCard = document.getElementById("computerWeapon");
-			computerChosedCard.innerHTML = '<img src = "ComputerCardHolder.jpg" />'
-			playerChosedCard = document.getElementById("playerWeapon");
-			playerChosedCard.innerHTML = '<img src = "PlayerCardHolder.jpg" />'
-		}	
-			
-		
-		let newWeapons = (numOfWeapons, addOne) => numOfWeapons + addOne;
-		
-		function checkWin(choice1, choice2) {
-			return (choice1 > choice2) ? true : false;
-		}
-		</script>
 	</body>
 <html>
